@@ -1,11 +1,12 @@
-import React from 'react';
-import NavBar from './NavBar';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Route from 'react-router-dom/Route';
+import React from 'react'
 
-import Music from './pages/Music';
-import Dev from './pages/Dev';
-import Home from './pages/Home';
+import { BrowserRouter as Router } from 'react-router-dom'
+import Route from 'react-router-dom/Route'
+
+import NavBar from './components/NavBar'
+import Home from './pages/Home'
+import Dev from './pages/Dev'
+import Music from './pages/Music'
 
 import './App.css';
 

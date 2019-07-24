@@ -12,8 +12,8 @@ function ProjectCard(props) {
         <Card.Text>
           {props.desc}
         </Card.Text>
-        <Button variant="primary">Web</Button>
-        <Button variant="secondary">Code</Button>
+        <Button href={props.homepage} variant="primary" block>Web</Button>
+        <Button href={props.url} variant="secondary" block>Code</Button>
       </Card.Body>
     </Card>
 

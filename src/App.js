@@ -1,44 +1,20 @@
 import React from 'react'
-
-import { BrowserRouter as Router } from 'react-router-dom'
-import Route from 'react-router-dom/Route'
+import './styles/App.css';
 
 import NavBar from './components/NavBar'
-import Home from './pages/Home'
-import Dev from './pages/Dev'
-import Music from './pages/Music'
+import Contents from './components/Contents'
+import Footer from './components/Footer'
 
-import './App.css';
-
-function App() {
-  return (
-    <div>
-    <NavBar />
-
-    <Router>
-    <div className="container-fluid">
-      <Route path="/" exact render={
-      () => {
-        return ( <Home /> );
-      }
-     }/>
-
-     <Route path="/music" exact render={
-     () => {
-       return ( <Music />  );
-     }
-    }/>
-
-    <Route path="/dev" exact render={
-    () => {
-      return ( <Dev /> );
-    }
-   }/>
-
-   </div>
-    </Router>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+          <div>
+            <NavBar />
+            <Contents />
+            <Footer />
+          </div>
+    )
+  }
 }
 
 export default App;

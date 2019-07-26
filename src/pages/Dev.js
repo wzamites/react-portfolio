@@ -1,21 +1,22 @@
 import React from 'react'
 
-import ProjectCard from '../components/ProjectCard'
-import jokesData from  '../assets/jokesData'
+import CardSection from '../components/CardSection'
+import SkillsButtons from '../components/SkillsButtons'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
-function Dev() {
-  const jokeComponents = jokesData.map(
-    function(joke) {
-      return <ProjectCard desc={joke.description} name={joke.name} url={joke.html_url} homepage={joke.homepage} />
-    }
-  )
-
-  return (
-    <div>
-      <h1>This is my development stuff</h1>
-      {jokeComponents}
-    </div>
-  );
+class Dev extends React.Component {
+  render() {
+    return (
+      <div>
+        <Row>
+          <Col><h1>This is my development stuff</h1></Col>
+        </Row>
+        <SkillsButtons />
+        <CardSection />
+      </div>
+    )
+  }
 }
 
 export default Dev;

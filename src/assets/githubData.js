@@ -1,6 +1,6 @@
 // https://api.github.com/users/wzamites/repos
 
-const jokesData = [
+const githubData = [
   {
     "id": 96936589,
     "node_id": "MDEwOlJlcG9zaXRvcnk5NjkzNjU4OQ==",
@@ -855,4 +855,4 @@ const jokesData = [
   }
 ]
 
-export default jokesData
+export default githubData

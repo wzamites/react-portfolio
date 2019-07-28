@@ -1,3 +1,48 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.alignright {
+  text-align: right;
+}
+
+.containerLayout {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1249px;
+  margin: 20px auto;
+}
+
+.cardContainer {
+width: 275px;
+min-width: 275px;
+display: flex;
+margin: 10px 1.5vw;
+}
+
+.buttonsCenter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.alignLeft {
+	float: left;
+}
+.alignRight {
+	float: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.greyBackground {
+  background-color: #e9ecef;
+}
+
+.bold {
+  font-weight: 900;
+}

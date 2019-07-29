@@ -46,3 +46,29 @@ margin: 10px 1.5vw;
 .bold {
   font-weight: 900;
 }
+
+.hide {
+  display: none;
+}
+
+#projectCards {
+  border:0;
+}
+
+.musescore {
+  font-weight: 400;
+  font-family: sans-serif;
+  white-space: normal;
+  overflow: visible;
+  fill: #000000;
+  line-height: normal;
+  text-indent:0;
+  text-align:start;
+  text-decoration-line:none;
+  text-decoration-style:solid;
+  text-decoration-color:#000;
+  text-transform:none;
+  block-progression:tb;
+  isolation:auto;
+  mix-blend-mode:normal;
+}

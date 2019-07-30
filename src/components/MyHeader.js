@@ -4,7 +4,6 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 
 import LinkedinButton from './LinkedinButton'
 import GithubButton from './GithubButton'
-import MusescoreButton from './MusescoreButton.js'
 
 class MyHeader extends React.Component {
   render() {

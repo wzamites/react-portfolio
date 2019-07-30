@@ -9,6 +9,7 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 class ProjectCard extends React.Component {
   render() {
 
+    //Only render the Open Source logo if it's a pulled project
     let openSourceLogo
     if (this.props.opensource === true) {
       openSourceLogo =
@@ -19,6 +20,7 @@ class ProjectCard extends React.Component {
       openSourceLogo = null
     }
 
+    //Only render the Globe logo if the project has a homepage
     let globeLogo
     if (this.props.homepage === null) {
       globeLogo = null

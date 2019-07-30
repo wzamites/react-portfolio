@@ -4,9 +4,18 @@ import ProjectCard from '../components/ProjectCard'
 import githubData from  '../assets/githubData'
 
 class CardSection extends React.Component {
+
+  //githubData now lives in state as githubComponents
+  constructor () {
+    super()
+    this.state = {
+      githubComponents: githubData
+    }
+  }
   render() {
 
-    const githubComponents = githubData.map(
+    //create githubCards which is an array of cards after looping
+    const githubCards = this.state.githubComponents.map(
       function(hub) {
         return (
           <ProjectCard
@@ -21,9 +30,10 @@ class CardSection extends React.Component {
       }
     )
 
+    //return the array of cards in a layout container
     return (
           <div className="containerLayout">
-            {githubComponents}
+            {githubCards}
           </div>
     )
   }

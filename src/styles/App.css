@@ -22,11 +22,11 @@ display: flex;
 margin: 10px 1.5vw;
 }
 
-.buttonsCenter {
+/* .buttonsCenter {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
 
 .alignLeft {
 	float: left;

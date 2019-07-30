@@ -1,13 +1,13 @@
 import React from 'react'
 
 import CardSection from '../components/CardSection'
-import SkillsButtons from '../components/SkillsButtons'
+import SkillsButtonSet from '../components/SkillsButtonSet'
 
 class Dev extends React.Component {
   render() {
     return (
       <div>
-        <SkillsButtons />
+        <SkillsButtonSet />
         <CardSection />
       </div>
     )

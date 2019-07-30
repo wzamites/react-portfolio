@@ -19,19 +19,21 @@ If not, get it here https://www.npmjs.com/get-npm
 
 ### Installing
 
-cd into the directory you'd like the project to live, then
+First cd where you'd like the project to live, then clone the repository there
 
 ```
 git clone https://github.com/wzamites/react-portfolio
 cd react-portfolio
 ```
 
-This installs the dependencies as defined in package.json, then starts the development server
+Then, install the dependencies as defined in package.json, and start the development server
 
 ```
 npm install
 npm start
 ```
+
+By default, this will open localhost:3000 in a browser and will update immediately as you save changes 
 ## Author
 
 * **BJ Zamites** - [GitHub](https://github.com/wzamites)

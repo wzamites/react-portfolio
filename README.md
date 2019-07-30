@@ -32,13 +32,8 @@ This installs the dependencies as defined in package.json, then starts the devel
 npm install
 npm start
 ```
+## Author
 
-## Deployment
-
-This isn't deployed yet but we'll see.
-
-## Authors
-
-* **BJ Zamites** - *Initial work* - [PurpleBooth](https://github.com/wzamites)
+* **BJ Zamites** - [GitHub](https://github.com/wzamites)
 
 See also the list of [contributors](https://github.com/wzamites/react-portfolio/contributors) who participated in this project.

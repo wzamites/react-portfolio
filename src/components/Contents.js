@@ -12,8 +12,8 @@ class Contents extends React.Component {
     return (
       <Router>
           <Route path="/" exact render={() => ( <Home /> )}/>
-          <Route path="/music" exact render={() => ( <Music /> )}/>
           <Route path="/dev" exact render={() =>  ( <Dev /> ) }/>
+          <Route path="/music" exact render={() => ( <Music /> )}/>
       </Router>
     )
   }

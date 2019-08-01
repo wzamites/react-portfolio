@@ -13,9 +13,9 @@ class ProjectCard extends React.Component {
     let openSourceLogo
     if (this.props.opensource === true) {
       openSourceLogo =
-        (<a href="" variant="primary" >
-          <i className="fab fa-osi alignRight bold"></i>
-        </a>)
+        (<p variant="primary" className= "alignRight" >
+          <i className="fab fa-osi bold"></i>
+        </p>)
     } else {
       openSourceLogo = null
     }

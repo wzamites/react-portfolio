@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button'
 
 import SkillButton from '../components/SkillButton'
 import skillsList from '../assets/skillsList'
@@ -12,7 +11,7 @@ class SkillsButtonSet extends React.Component {
   constructor() {
     super()
     this.state = {
-      skills: skillsList
+      skills: skillsList,
     }
   }
 
@@ -23,7 +22,7 @@ class SkillsButtonSet extends React.Component {
     const skillsLists = this.state.skills.map(
       function(hub) {
         return (
-          <SkillButton skill={hub.name} variant="outline-primary"/>        )
+          <SkillButton key= {hub.id} skill={hub.name} variant="outline-primary"/>        )
       }
     )
 

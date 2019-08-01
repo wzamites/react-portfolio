@@ -1,21 +1,29 @@
 import React from 'react'
 
 import ProjectCard from '../components/ProjectCard'
-import githubData from  '../assets/githubData'
 
 class CardSection extends React.Component {
 
-  //githubData now lives in state as githubComponents
-  constructor () {
-    super()
-    this.state = {
-      githubComponents: githubData
-    }
+  constructor() {
+      super()
+      this.state = {
+        repos: [],
+      }
   }
+
+  componentDidMount() {
+    fetch("https://api.github.com/users/wzamites/repos")
+    .then(response => response.json())
+    .then(data => {
+      this.setState({
+        repos: data
+      })
+    })
+  }
+
   render() {
 
-    //create githubCards which is an array of cards after looping
-    const githubCards = this.state.githubComponents.map(
+    const githubCards = this.state.repos.map(
       function(hub) {
         return (
           <ProjectCard
@@ -30,11 +38,13 @@ class CardSection extends React.Component {
       }
     )
 
-    //return the array of cards in a layout container
+
     return (
-          <div className="containerLayout">
-            {githubCards}
-          </div>
+      <div>
+        <div className="containerLayout">
+          {githubCards}
+        </div>
+      </div>
     )
   }
 }

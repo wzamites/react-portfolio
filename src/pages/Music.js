@@ -7,8 +7,6 @@ class Music extends React.Component {
         <p className="center">Coming soon</p>
       </div>
     )
-
-
   }
 }
 

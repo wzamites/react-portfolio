@@ -2,8 +2,8 @@ import React from 'react'
 
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
-import LinkedinButton from './LinkedinButton'
-import GithubButton from './GithubButton'
+import LinkedinButton from '../Buttons/LinkedinButton'
+import GithubButton from '../Buttons/GithubButton'
 
 class MyHeader extends React.Component {
   render() {

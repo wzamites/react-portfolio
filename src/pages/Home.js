@@ -5,7 +5,6 @@ class Home extends React.Component {
     return (
       <h1 className="center">Hello. Thanks for coming.</h1>
     )
-
   }
 }
 

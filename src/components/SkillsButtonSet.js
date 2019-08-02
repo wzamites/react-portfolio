@@ -1,9 +1,9 @@
 import React from 'react'
 
-import SkillButton from '../components/SkillButton'
+import SkillButton from '../Buttons/SkillButton'
 import skillsList from '../assets/skillsList'
 
-import StarButton from '../components/StarButton'
+import StarButton from '../Buttons/StarButton'
 
 class SkillsButtonSet extends React.Component {
 

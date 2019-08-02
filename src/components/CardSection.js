@@ -3,7 +3,6 @@ import React from 'react'
 import ProjectCard from '../components/ProjectCard'
 
 class CardSection extends React.Component {
-
   constructor() {
       super()
       this.state = {
@@ -11,6 +10,7 @@ class CardSection extends React.Component {
       }
   }
 
+  // https://api.github.com/repos/wzamites/[this.state.repos.name]/languages
   componentDidMount() {
     fetch("https://api.github.com/users/wzamites/repos")
     .then(response => response.json())
@@ -21,8 +21,10 @@ class CardSection extends React.Component {
     })
   }
 
+
   render() {
 
+    //Create this constant which is dupicating ProjectCard over an array
     const githubCards = this.state.repos.map(
       function(hub) {
         return (
@@ -33,12 +35,13 @@ class CardSection extends React.Component {
           name={hub.name}
           url={hub.html_url}
           homepage={hub.homepage}
-          opensource={hub.fork} />
+          opensource={hub.fork}
+          languages_url={hub.languages_url} />
         )
       }
     )
 
-
+    //Returning the ProjectCards from the previous function
     return (
       <div>
         <div className="containerLayout">

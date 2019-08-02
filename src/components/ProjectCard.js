@@ -1,12 +1,35 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card'
-import Badge from 'react-bootstrap/Badge'
 
+//Bootstrap Imports
+import Card from 'react-bootstrap/Card'
+
+//Icon Imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
+//Calls to to custom components
+import LangButton from '../Buttons/LangButton'
+
 class ProjectCard extends React.Component {
+  constructor() {
+      super()
+      this.state = {
+        languages: [],
+      }
+  }
+
+  //call the languages used
+  componentDidMount() {
+    fetch(this.props.languages_url)  //Get the languages URL through props and pass it into fetch.
+    .then(response => response.json())
+    .then(data => {
+      this.setState({
+        languages: Object.getOwnPropertyNames(data) //store as array in state
+      })
+    })
+  }
+
   render() {
 
     //Only render the Open Source logo if it's a pulled project
@@ -32,25 +55,47 @@ class ProjectCard extends React.Component {
       )
     }
 
+    //return as many LangButtons as there are languages
+    const langButtons = this.state.languages.map(
+      function(count) {
+        return (
+          <LangButton lang = {count} />
+        )
+      }
+    )
+
     return (
       <div className="cardContainer">
         <Card id="projectCards" style={{ width: '18rem' }}>
           <Card.Img variant="top" src="" />
+
           <Card.Body>
-          {openSourceLogo}
+
+            {openSourceLogo}
+
             <Card.Title>{this.props.name}</Card.Title>
+
             <Card.Text>
               {this.props.desc}
             </Card.Text>
-            <Badge pill variant="primary">{this.props.lang}</Badge>
+
+            {langButtons}
+
             <div className="alignRight">
               {globeLogo}
               &nbsp;
-              <a href={this.props.url} target="_blank" rel="noopener noreferrer">
+              <a
+              href={this.props.url}
+              target="_blank"
+              rel="noopener noreferrer">
+
                 <FontAwesomeIcon icon={faCode} />
+
               </a>
+
             </div>
           </Card.Body>
+
         </Card>
       </div>
     )

@@ -2,7 +2,7 @@ import React from 'react'
 
 import './styles/App.css';
 
-import Test from './components/Test'
+// import Test from './components/Test'
 import NavBar from './components/NavBar'
 import Contents from './components/Contents'
 import Footer from './components/Footer'

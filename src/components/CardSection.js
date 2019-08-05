@@ -1,6 +1,6 @@
 import React from 'react'
-
 import ProjectCard from '../components/ProjectCard'
+import socials from '../assets/socials'
 
 class CardSection extends React.Component {
   constructor() {
@@ -10,9 +10,9 @@ class CardSection extends React.Component {
       }
   }
 
-  // https://api.github.com/repos/wzamites/[this.state.repos.name]/languages
+  // get your github username from the socials.js asset and make api call
   componentDidMount() {
-    fetch("https://api.github.com/users/wzamites/repos")
+    fetch("https://api.github.com/users/"+ socials.github + "/repos")
     .then(response => response.json())
     .then(data => {
       this.setState({
@@ -20,7 +20,6 @@ class CardSection extends React.Component {
       })
     })
   }
-
 
   render() {
 

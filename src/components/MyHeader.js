@@ -5,6 +5,8 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import LinkedinButton from '../Buttons/LinkedinButton'
 import GithubButton from '../Buttons/GithubButton'
 
+import socials from '../assets/socials'
+
 class MyHeader extends React.Component {
   render() {
     return (
@@ -15,9 +17,10 @@ class MyHeader extends React.Component {
           <br></br>
           Boston, Massachusetts
         </p>
-          <LinkedinButton />
+          <LinkedinButton username={socials.linkedin} />
           &nbsp;
-          <GithubButton />
+          <GithubButton username={socials.github} />
+
       </Jumbotron>
     )
   }

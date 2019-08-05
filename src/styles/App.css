@@ -72,3 +72,7 @@ margin: 10px 1.5vw;
   isolation:auto;
   mix-blend-mode:normal;
 }
+
+.languagePill {
+  margin: 2px;
+}

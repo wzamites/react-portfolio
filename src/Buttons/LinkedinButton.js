@@ -6,7 +6,7 @@ class LinkedinButton extends React.Component {
     return (
       <Button
       variant="outline-secondary"
-      href="https://www.linkedin.com/in/wzamites"
+      href={"https://www.linkedin.com/in/" + this.props.username}
       target="_blank">
         <i className="fab fa-linkedin-in fa-lg"></i>
       </Button>

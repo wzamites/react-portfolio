@@ -15,21 +15,23 @@ class SkillsButtonSet extends React.Component {
     }
   }
 
-  //Set two states: button clicked and button unclicked boostrap styling
   render() {
 
     //Creates skillsLists, an array of of SkillsButton elements
     const skillsLists = this.state.skills.map(
       function(hub) {
         return (
-          <SkillButton key= {hub.id} skill={hub.name} variant="outline-primary"/>        )
+          <div  className="languagePill">
+            <SkillButton key= {hub.id} skill={hub.name} variant="outline-primary"/>
+          </div>
+        )
       }
     )
 
     return (
       <div className="containerLayout">
 
-        <StarButton /> &nbsp;
+        <StarButton />
         {skillsLists}
 
       </div>

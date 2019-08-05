@@ -19,7 +19,7 @@ class ProjectCard extends React.Component {
       }
   }
 
-  //call the languages used
+  //API call the languages used
   componentDidMount() {
     fetch(this.props.languages_url)  //Get the languages URL through props and pass it into fetch.
     .then(response => response.json())
@@ -45,7 +45,7 @@ class ProjectCard extends React.Component {
 
     //Only render the Globe logo if the project has a homepage
     let globeLogo
-    if (this.props.homepage === null) {
+    if (this.props.homepage === null || this.props.homepage === "") {
       globeLogo = null
     } else {
       globeLogo = (
@@ -79,7 +79,9 @@ class ProjectCard extends React.Component {
               {this.props.desc}
             </Card.Text>
 
-            {langButtons}
+            <span>
+              {langButtons}
+            </span>
 
             <div className="alignRight">
               {globeLogo}

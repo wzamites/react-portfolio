@@ -4,7 +4,7 @@ import Badge from 'react-bootstrap/Badge'
 class LangButton extends React.Component {
   render() {
     return (
-      <Badge pill variant="primary">{this.props.lang}</Badge>
+      <Badge className="languagePill" pill variant="primary">{this.props.lang}</Badge>
     )
   }
 }

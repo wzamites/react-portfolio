@@ -38,7 +38,6 @@ class SkillButton extends React.Component {
         >
           {this.props.skill}
         </Button>
-        &nbsp;
       </div>
     )
   }

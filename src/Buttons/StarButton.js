@@ -27,7 +27,7 @@ class StarButton extends React.Component {
     //return one button with the skill as a prop and display as state
     return (
       <div>
-        <Button variant={buttonDisplay} onClick={this.handleClick}><i className="fas fa-star"></i></Button>
+        <Button className="languagePill" variant={buttonDisplay} onClick={this.handleClick}><i className="fas fa-star"></i></Button>
       </div>
     )
   }

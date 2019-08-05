@@ -32,8 +32,32 @@ Then, install the dependencies as defined in package.json, and start the develop
 npm install
 npm start
 ```
+By default, this will open localhost:3000 in a browser and will update immediately as you save changes
 
-By default, this will open localhost:3000 in a browser and will update immediately as you save changes 
+##Customizing
+In order to load your GitHub projects as cards, edit the following file
+
+```
+src/assets/socials.js
+```
+
+There you will see the following
+
+```
+//enter usernames only
+
+const socials = {
+  domain: "",
+  linkedin: "",
+  github: "",
+}
+
+export default socials
+
+```
+
+In order to load the first 30 GitHub projects as cards, change the ```github``` parameter to your username
+
 ## Author
 
 * **BJ Zamites** - [GitHub](https://github.com/wzamites)

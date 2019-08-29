@@ -4,7 +4,14 @@ class Music extends React.Component {
   render() {
     return(
       <div>
-        <p className="center">Coming soon</p>
+        <div className="text-center">
+          <iframe
+          width="80%"
+          height="394"
+          src="https://musescore.com/user/32345141/scores/5676062/embed"
+          frameborder="0" allowfullscreen allow="autoplay; fullscreen">
+          </iframe>
+        </div>
       </div>
     )
   }

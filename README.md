@@ -1,6 +1,6 @@
-# William Zamites's Portfolio
+# Github to Portfolio
 
-My personal site meant to feature my work in music and software development.
+This setup is meant to be able to take ANY github username, display the repositories, and be able to filter by language or technology used.
 
 ## Getting Started
 

@@ -1,6 +1,6 @@
 # Github to Portfolio
 
-This setup is meant to be able to take ANY github username, display the repositories, and be able to filter by language or technology used.
+This setup is meant to take ANY github username, display its repositories, and apply filters by language or technology used.
 
 ## Getting Started
 

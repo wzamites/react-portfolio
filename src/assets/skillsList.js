@@ -1,6 +1,6 @@
 const skillsList = [
   { id: 1,
-    name: "Javascript"},
+    name: "JavaScript"},
   { id: 2,
     name: "React"},
   { id: 3,

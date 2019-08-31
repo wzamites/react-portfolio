@@ -76,3 +76,9 @@ margin: 10px 1.5vw;
 .languagePill {
   margin: 2px;
 }
+
+.linkColor {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}

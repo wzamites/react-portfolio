@@ -1,29 +1,15 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { whatever } from '../redux/actions/skill-selected'
 
 class SkillButton extends React.Component {
 
-  //set whether the button is clicked
-  constructor() {
-    super()
-
-    //initialize state
-    this.state = {
-      isClicked: false
-    }
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  //set the isClicked equal to true when clicked
-  handleClick() {
-    this.setState({isClicked: !this.state.isClicked})
-  }
-
   render() {
-
     //logic to return primary if clicked and outline-primary if not
     let buttonDisplay
-    if (this.state.isClicked === true) {
+    if (this.props.selectedskills[this.props.skill]) {
       buttonDisplay = "primary"
     } else {
       buttonDisplay = "outline-primary"
@@ -33,7 +19,8 @@ class SkillButton extends React.Component {
     return (
       <div>
         <Button
-        onClick={this.handleClick} //Result of the handleClick function
+        onClick={() => this.props.whatever(this.props.skill)}
+        // onClick={this.handleClick} //Result of the handleClick function
         variant={buttonDisplay} //This is just a variable in render()
         >
           {this.props.skill}
@@ -43,4 +30,15 @@ class SkillButton extends React.Component {
   }
 }
 
-export default SkillButton
+function mapStateToProps(state) {
+  return {
+    repositories: state.repositories,
+    selectedskills: state.selectedskills
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({whatever:whatever}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SkillButton)

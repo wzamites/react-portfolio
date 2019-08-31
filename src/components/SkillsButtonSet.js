@@ -1,8 +1,6 @@
 import React from 'react'
-
 import SkillButton from '../Buttons/SkillButton'
 import skillsList from '../assets/skillsList'
-
 import StarButton from '../Buttons/StarButton'
 
 class SkillsButtonSet extends React.Component {
@@ -21,8 +19,8 @@ class SkillsButtonSet extends React.Component {
     const skillsLists = this.state.skills.map(
       function(hub) {
         return (
-          <div  className="languagePill">
-            <SkillButton key= {hub.id} skill={hub.name} variant="outline-primary"/>
+          <div key = {hub.id} className="languagePill">
+            <SkillButton key={hub.id} skill={hub.name} variant="outline-primary"/>
           </div>
         )
       }
@@ -33,7 +31,6 @@ class SkillsButtonSet extends React.Component {
 
         <StarButton />
         {skillsLists}
-
       </div>
     )
   }

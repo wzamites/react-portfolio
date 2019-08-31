@@ -1,14 +1,9 @@
 import React from 'react'
-
-//Bootstrap Imports
+import cardlogo from '../assets/wzamites_img.jpeg'
 import Card from 'react-bootstrap/Card'
-
-//Icon Imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
-
-//Calls to to custom components
 import LangButton from '../Buttons/LangButton'
 
 class ProjectCard extends React.Component {
@@ -32,18 +27,18 @@ class ProjectCard extends React.Component {
 
   render() {
 
-    //Only render the Open Source logo if it's a pulled project
+    //Only show the Open Source logo if it's a pulled project
     let openSourceLogo
     if (this.props.opensource === true) {
       openSourceLogo =
         (<p variant="primary" className= "alignRight" >
-          <i className="fab fa-osi bold"></i>
+          <i className="fab fa-osi bold linkColor"></i>
         </p>)
     } else {
       openSourceLogo = null
     }
 
-    //Only render the Globe logo if the project has a homepage
+    //Only show the Globe logo if the project has a homepage
     let globeLogo
     if (this.props.homepage === null || this.props.homepage === "") {
       globeLogo = null
@@ -59,7 +54,7 @@ class ProjectCard extends React.Component {
     const langButtons = this.state.languages.map(
       function(count) {
         return (
-          <LangButton lang = {count} />
+          <LangButton key={count} lang={count} />
         )
       }
     )
@@ -67,35 +62,46 @@ class ProjectCard extends React.Component {
     return (
       <div className="cardContainer">
         <Card id="projectCards" style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="" />
+
+          <Card.Img variant="top" src={cardlogo} />
 
           <Card.Body>
 
             {openSourceLogo}
 
-            <Card.Title>{this.props.name}</Card.Title>
+            <Card.Title>
+              {this.props.name}
+            </Card.Title>
 
             <Card.Text>
               {this.props.desc}
             </Card.Text>
 
             <span>
+              <LangButton lang = "React" />
+              <LangButton lang = "jQuery" />
               {langButtons}
+              <LangButton lang = "Bootstrap" />
             </span>
 
             <div className="alignRight">
+
               {globeLogo}
+
               &nbsp;
+
               <a
               href={this.props.url}
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              >
 
                 <FontAwesomeIcon icon={faCode} />
 
               </a>
 
             </div>
+
           </Card.Body>
 
         </Card>

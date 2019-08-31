@@ -1,10 +1,11 @@
 import React from 'react'
-import Badge from 'react-bootstrap/Badge'
+import Button from 'react-bootstrap/Button'
 
 class LangButton extends React.Component {
   render() {
     return (
-      <Badge className="languagePill" pill variant="primary">{this.props.lang}</Badge>
+      <Button className="languagePill badge-pill badge" variant="outline-primary">{this.props.lang}</Button>
+
     )
   }
 }

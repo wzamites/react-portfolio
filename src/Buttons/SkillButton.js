@@ -2,7 +2,7 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { whatever } from '../redux/actions/skill-selected'
+import { selectSkill } from '../redux/actions/skill-selected'
 
 class SkillButton extends React.Component {
 
@@ -19,7 +19,7 @@ class SkillButton extends React.Component {
     return (
       <div>
         <Button
-        onClick={() => this.props.whatever(this.props.skill)}
+        onClick={() => this.props.selectSkill(this.props.skill)}
         // onClick={this.handleClick} //Result of the handleClick function
         variant={buttonDisplay} //This is just a variable in render()
         >
@@ -38,7 +38,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({whatever:whatever}, dispatch)
+  return bindActionCreators({selectSkill:selectSkill}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SkillButton)

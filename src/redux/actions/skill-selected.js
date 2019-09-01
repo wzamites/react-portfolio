@@ -1,5 +1,5 @@
 //Action Creator
-export const whatever = (skill) => {
+export const selectSkill = (skill) => {
   return {
     type: "SKILL_TOGGLE",
     payload: skill

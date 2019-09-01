@@ -82,3 +82,7 @@ margin: 10px 1.5vw;
   text-decoration: none;
   background-color: transparent;
 }
+
+.hide {
+  display:none;
+}

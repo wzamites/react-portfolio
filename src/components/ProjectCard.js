@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import LangButton from '../Buttons/LangButton'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
 class ProjectCard extends React.Component {
   constructor() {
@@ -26,6 +28,14 @@ class ProjectCard extends React.Component {
   }
 
   render() {
+    //This this controls whether the card will be displayed based on filters
+    let filterDisplay
+    //if No filter is selected, false + false... === 0 and display all of them
+    if (Object.values(this.props.selectedskills).reduce((a, b) => a + b, 0) === 0) {
+      filterDisplay = ""
+    } else {
+      filterDisplay = ""
+    }
 
     //Only show the Open Source logo if it's a pulled project
     let openSourceLogo
@@ -59,8 +69,17 @@ class ProjectCard extends React.Component {
       }
     )
 
+      const topicButtons = this.props.topics.map(
+        function(count) {
+          return (
+            <LangButton key={count} lang={count} />
+          )
+        }
+      )
+
+
     return (
-      <div className="cardContainer">
+      <div className={"cardContainer " + filterDisplay}>
         <Card id="projectCards" style={{ width: '18rem' }}>
 
           <Card.Img variant="top" src={cardlogo} />
@@ -78,10 +97,8 @@ class ProjectCard extends React.Component {
             </Card.Text>
 
             <span>
-              <LangButton lang = "React" />
-              <LangButton lang = "jQuery" />
+              {topicButtons}
               {langButtons}
-              <LangButton lang = "Bootstrap" />
             </span>
 
             <div className="alignRight">
@@ -110,4 +127,11 @@ class ProjectCard extends React.Component {
   }
 }
 
-export default ProjectCard
+function mapStateToProps(state) {
+  return {
+    repositories: state.repositories,
+    selectedskills: state.selectedskills
+  }
+}
+
+export default connect(mapStateToProps)(ProjectCard)

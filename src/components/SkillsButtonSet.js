@@ -28,8 +28,6 @@ class SkillsButtonSet extends React.Component {
 
     return (
       <div className="containerLayout">
-
-        <StarButton />
         {skillsLists}
       </div>
     )

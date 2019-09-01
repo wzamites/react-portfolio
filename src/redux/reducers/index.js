@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux'
-import FakeApi from './reducer-fakeapi'
+import Github from './loaded-github'
 import SkillSelected from './skill-selection'
 
 const allReducers = combineReducers({
-  repositories: FakeApi,
-  selectedskills: SkillSelected
+  repositories: Github,
+  selectedskills: SkillSelected,
 })
 
 export default allReducers

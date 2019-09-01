@@ -10,11 +10,7 @@ const skillsList = [
   { id: 5,
     name: "CSS"},
   { id: 6,
-    name: "Bootstrap"},
-  { id: 7,
     name: "MATLAB"},
-  { id: 8,
-    name: "Open Source"},
 ]
 
 export default skillsList

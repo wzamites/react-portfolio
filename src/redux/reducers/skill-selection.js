@@ -1,7 +1,7 @@
-import skillsList from '../../assets/skillsList.js'
+import languageList from '../../assets/languageList.js'
 
 const defaultState = {}
-skillsList.forEach((user)=>defaultState[user.name] = false);
+languageList.forEach((user)=>defaultState[user.name] = false);
 
 export default function(state=defaultState, action) {
   switch(action.type) {
@@ -10,6 +10,7 @@ export default function(state=defaultState, action) {
         ...state,
         [action.payload]: !state[action.payload]
       }
+    default:
+      return state
   }
-  return state
 }

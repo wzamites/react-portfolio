@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import LangButton from '../Buttons/LangButton'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import extraData from '../assets/extraData'
 
 class ProjectCard extends React.Component {
   constructor() {
@@ -60,7 +60,7 @@ class ProjectCard extends React.Component {
       )
     }
 
-    //return as many LangButtons as there are languages
+    //return the language buttons based on the array of languages
     const langButtons = this.state.languages.map(
       function(count) {
         return (
@@ -69,20 +69,25 @@ class ProjectCard extends React.Component {
       }
     )
 
-      const topicButtons = this.props.topics.map(
-        function(count) {
-          return (
-            <LangButton key={count} lang={count} />
-          )
-        }
-      )
+    //get the image URL of the project (this is manual in gitHub). No API yet
+    let cardImage = extraData.find(obj => obj.name === this.props.name).img
 
+    //return the buttons for topics, or extra technologies as defined in extraData
+    let topicButtons = extraData.find(obj => obj.name === this.props.name).languages.map(
+      function (count) {
+        return (
+          <LangButton key={count} lang={count} />
+        )
+      }
+    )
 
     return (
       <div className={"cardContainer " + filterDisplay}>
         <Card id="projectCards" style={{ width: '18rem' }}>
 
-          <Card.Img variant="top" src={cardlogo} />
+          <a href={this.props.url}  target="_blank" rel="noopener noreferrer">
+            <Card.Img variant="top" src={cardImage} />
+          </a>
 
           <Card.Body>
 
@@ -107,14 +112,8 @@ class ProjectCard extends React.Component {
 
               &nbsp;
 
-              <a
-              href={this.props.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              >
-
+              <a href={this.props.url}  target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faCode} />
-
               </a>
 
             </div>

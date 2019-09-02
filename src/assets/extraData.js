@@ -31,7 +31,7 @@ const extraData = [
   },
   {
     name: "time-tracker",
-    languages: [],
+    languages: ["jQuery"],
     img: "https://repository-images.githubusercontent.com/174415790/7a7fac80-cd0c-11e9-8a4d-c5be8e628b6b"
   },
   {

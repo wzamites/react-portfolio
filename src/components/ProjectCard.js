@@ -30,11 +30,23 @@ class ProjectCard extends React.Component {
   render() {
     //This this controls whether the card will be displayed based on filters
     let filterDisplay
+    let combinedLang = extraData.find(obj => obj.name === this.props.name).languages.concat(this.state.languages)
+    let trueLanguages = []
+
+    for (var key in this.props.selectedskills) {
+      if (this.props.selectedskills[key]) {
+          trueLanguages.push(key);
+      }
+    }
+
+    // let checker = (arr, target) => target.every(v => arr.includes(v));
+    let checker = (arr2, arr1) => arr2.every(function(val) { return arr1.indexOf(val) >= 0 })
+
     //if No filter is selected, false + false... === 0 and display all of them
     if (Object.values(this.props.selectedskills).reduce((a, b) => a + b, 0) === 0) {
       filterDisplay = ""
-    } else {
-      filterDisplay = ""
+    } else if(!checker(trueLanguages,combinedLang)) {
+      filterDisplay = "hide"
     }
 
     //Only show the Open Source logo if it's a pulled project

@@ -9,7 +9,7 @@ class SkillButton extends React.Component {
   render() {
     //logic to return primary if clicked and outline-primary if not
     let buttonDisplay
-    if (this.props.selectedskills[this.props.skill]) {
+    if (this.props.skillarray.includes(this.props.skill)) {
       buttonDisplay = "primary"
     } else {
       buttonDisplay = "outline-primary"
@@ -33,7 +33,8 @@ class SkillButton extends React.Component {
 function mapStateToProps(state) {
   return {
     repositories: state.repositories,
-    selectedskills: state.selectedskills
+    selectedskills: state.selectedskills,
+    skillarray: state.skillarray
   }
 }
 

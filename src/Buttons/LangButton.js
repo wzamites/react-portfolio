@@ -7,7 +7,7 @@ class LangButton extends React.Component {
     //logic to return primary if clicked and outline-primary if not
     //if the selected skill (props.lang in this case) is true then display primary
     let buttonDisplay
-    if (this.props.selectedskills[this.props.lang]) {
+    if (this.props.skillarray.includes(this.props.lang)) {
       buttonDisplay = "primary"
     } else {
       buttonDisplay = "outline-primary"
@@ -23,7 +23,7 @@ class LangButton extends React.Component {
 function mapStateToProps(state) {
   return {
     repositories: state.repositories,
-    selectedskills: state.selectedskills
+    skillarray: state.skillarray
   }
 }
 

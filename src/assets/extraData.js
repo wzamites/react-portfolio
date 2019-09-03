@@ -1,7 +1,7 @@
 const extraData = [
   {
     name: "react-portfolio",
-    languages: ["React", "Redux"],
+    languages: ["React/Redux"],
     img: "https://repository-images.githubusercontent.com/198307890/76ea2680-cd08-11e9-95e5-18ef0ecbd627"
   },
   {

@@ -11,8 +11,8 @@ class Contents extends React.Component {
   render() {
     return (
       <Router>
-          <Route path="/" exact render={() => ( <Home /> )}/>
-          <Route path="/dev" exact render={() =>  ( <Dev /> ) }/>
+          <Route path={process.env.PUBLIC_URL + '/'} exact render={() => ( <Home /> )}/>
+          <Route path={process.env.PUBLIC_URL + '/dev'} exact render={() =>  ( <Dev /> ) }/>
           <Route path="/music" exact render={() => ( <Music /> )}/>
       </Router>
     )

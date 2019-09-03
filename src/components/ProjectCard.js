@@ -98,7 +98,7 @@ class ProjectCard extends React.Component {
           </a>
           <Card.Body>
             <Card.Title>
-              {this.props.name}
+              {this.props.name}{openSourceLogo}
             </Card.Title>
             <Card.Text className="text-muted">
               {this.props.desc}
@@ -108,12 +108,14 @@ class ProjectCard extends React.Component {
               {langButtons}
             </span>
           </Card.Body>
-          <Card.Footer>
+          <Card.Footer >
+          <div>
             <a href={this.props.url}  target="_blank" rel="noopener noreferrer">
               Github <FontAwesomeIcon icon={faCode} />
             </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
             {globeLogo}
+          </div>
           </Card.Footer>
         </Card>
       </div>

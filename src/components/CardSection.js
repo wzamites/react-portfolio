@@ -25,10 +25,8 @@ class CardSection extends React.Component {
 
     //Returning the ProjectCards from the previous function
     return (
-      <div>
-        <div className="containerLayout">
-          {githubCards}
-        </div>
+      <div className="containerLayout">
+        {githubCards}
       </div>
     )
   }
@@ -37,6 +35,7 @@ class CardSection extends React.Component {
 function mapStateToProps(state) {
   return {
     repositories: state.repositories,
+    selectedskills: state.selectedskills
   }
 }
 

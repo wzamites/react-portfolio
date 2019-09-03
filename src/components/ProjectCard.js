@@ -7,6 +7,8 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import LangButton from '../Buttons/LangButton'
 import { connect } from 'react-redux'
 import extraData from '../assets/extraData'
+import Button from 'react-bootstrap/Button'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
 class ProjectCard extends React.Component {
   constructor() {
@@ -66,8 +68,8 @@ class ProjectCard extends React.Component {
       globeLogo = null
     } else {
       globeLogo = (
-        <a href={this.props.homepage} target="_blank" rel="noopener noreferrer" variant="primary" >
-          <FontAwesomeIcon icon={faGlobe} />
+        <a href={this.props.homepage} target="_blank" rel="noopener noreferrer">
+          Website <FontAwesomeIcon icon={faGlobe} />
         </a>
       )
     }
@@ -96,42 +98,28 @@ class ProjectCard extends React.Component {
     return (
       <div className={"cardContainer " + filterDisplay}>
         <Card id="projectCards" style={{ width: '18rem' }}>
-
           <a href={this.props.url}  target="_blank" rel="noopener noreferrer">
             <Card.Img variant="top" src={cardImage} />
           </a>
-
           <Card.Body>
-
-            {openSourceLogo}
-
             <Card.Title>
               {this.props.name}
             </Card.Title>
-
-            <Card.Text>
+            <Card.Text className="text-muted">
               {this.props.desc}
             </Card.Text>
-
             <span>
               {topicButtons}
               {langButtons}
             </span>
-
-            <div className="alignRight">
-
-              {globeLogo}
-
-              &nbsp;
-
-              <a href={this.props.url}  target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faCode} />
-              </a>
-
-            </div>
-
           </Card.Body>
-
+          <Card.Footer>
+            <a href={this.props.url}  target="_blank" rel="noopener noreferrer">
+              Github <FontAwesomeIcon icon={faCode} />
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {globeLogo}
+          </Card.Footer>
         </Card>
       </div>
     )

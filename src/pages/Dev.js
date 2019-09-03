@@ -6,7 +6,7 @@ class Dev extends React.Component {
   render() {
     return (
       <div>
-      <SkillsButtonSet />
+        <SkillsButtonSet />
         <CardSection />
       </div>
     )

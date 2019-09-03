@@ -12,7 +12,6 @@ class App extends React.Component {
     return (
         <div>
         <ApiCalls />
-        <NavBar />
         <MyHeader />
         <Contents />
         <Footer />

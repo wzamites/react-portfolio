@@ -1,6 +1,7 @@
 import React from 'react'
 import SkillButton from '../Buttons/SkillButton'
 import languageList from '../assets/languageList'
+import Badge from 'react-bootstrap/Badge'
 
 class SkillsButtonSet extends React.Component {
 
@@ -26,9 +27,9 @@ class SkillsButtonSet extends React.Component {
     )
 
     return (
-      <div className="containerLayout">
-        {skillsLists}
-      </div>
+        <div className="containerLayout">
+          {skillsLists}
+          </div>
     )
   }
 }

@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { loadGithub } from '../redux/actions/load-github'
 import socials from '../assets/socials'
 
-
 class ApiCalls extends React.Component {
   componentDidMount() {
 

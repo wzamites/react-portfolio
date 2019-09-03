@@ -29,7 +29,7 @@ class SkillsButtonSet extends React.Component {
     return (
         <div className="containerLayout">
           {skillsLists}
-          </div>
+        </div>
     )
   }
 }

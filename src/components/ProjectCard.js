@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import LangButton from '../Buttons/LangButton'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Tooltip from 'react-bootstrap/Tooltip'
 import { connect } from 'react-redux'
 import extraData from '../assets/extraData'
 
@@ -47,9 +49,21 @@ class ProjectCard extends React.Component {
     let openSourceLogo
     if (this.props.opensource === true) {
       openSourceLogo =
-        (<p variant="primary" className= "alignRight" >
-          <i className="fab fa-osi bold linkColor"></i>
-        </p>)
+        (
+
+          <OverlayTrigger key='right' placement='right'
+            overlay={
+              <Tooltip id="tooltip-right">
+              This is an open source project. I forked it and made contributions
+              </Tooltip>
+            }>
+          <p variant="primary" className= "alignRight" >
+            <i className="fab fa-osi bold linkColor"></i>
+          </p>
+        </OverlayTrigger>
+
+
+      )
     } else {
       openSourceLogo = null
     }

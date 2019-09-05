@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { selectSkill } from '../redux/actions/skill-selected'
 
 class LangButton extends React.Component {
   render() {
@@ -14,7 +16,7 @@ class LangButton extends React.Component {
     }
 
     return (
-      <Button className="languagePill badge-pill badge" variant={buttonDisplay}>{this.props.lang}</Button>
+      <Button onClick={() => this.props.selectSkill(this.props.lang)} className="languagePill badge-pill badge" variant={buttonDisplay}>{this.props.lang}</Button>
 
     )
   }
@@ -27,4 +29,8 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(LangButton)
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({selectSkill:selectSkill}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LangButton)

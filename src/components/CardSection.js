@@ -35,7 +35,7 @@ class CardSection extends React.Component {
 function mapStateToProps(state) {
   return {
     repositories: state.repositories,
-    selectedskills: state.selectedskills
+    skillarray: state.skillarray
   }
 }
 

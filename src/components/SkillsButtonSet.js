@@ -1,7 +1,6 @@
 import React from 'react'
 import SkillButton from '../Buttons/SkillButton'
 import languageList from '../assets/languageList'
-import Badge from 'react-bootstrap/Badge'
 
 class SkillsButtonSet extends React.Component {
 

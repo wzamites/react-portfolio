@@ -3,9 +3,6 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import LinkedinButton from '../Buttons/LinkedinButton'
 import GithubButton from '../Buttons/GithubButton'
 import socials from '../assets/socials'
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-
 
 class MyHeader extends React.Component {
   render() {

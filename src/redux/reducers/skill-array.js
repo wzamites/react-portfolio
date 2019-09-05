@@ -1,5 +1,3 @@
-import languageList from '../../assets/languageList.js'
-
 const defaultState = []
 
 export default function(state=defaultState, action) {

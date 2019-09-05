@@ -1,5 +1,4 @@
 import React from 'react'
-import cardlogo from '../assets/wzamites_img.jpeg'
 import Card from 'react-bootstrap/Card'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
@@ -7,8 +6,6 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import LangButton from '../Buttons/LangButton'
 import { connect } from 'react-redux'
 import extraData from '../assets/extraData'
-import Button from 'react-bootstrap/Button'
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
 class ProjectCard extends React.Component {
   constructor() {

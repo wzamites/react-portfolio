@@ -15,6 +15,8 @@ class Home extends React.Component {
         </Card.Body>
       </Card>
 
+      <br/>
+
       <Card className="text-center">
         <Card.Header>I teach your band</Card.Header>
         <Card.Body>

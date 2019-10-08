@@ -1,5 +1,10 @@
 const extraData = [
   {
+    name: "mcmocf",
+    languages: ["React/Redux"],
+    img: "https://repository-images.githubusercontent.com/198307890/76ea2680-cd08-11e9-95e5-18ef0ecbd627"
+  },
+  {
     name: "react-portfolio",
     languages: ["React/Redux"],
     img: "https://repository-images.githubusercontent.com/198307890/76ea2680-cd08-11e9-95e5-18ef0ecbd627"
@@ -35,7 +40,7 @@ const extraData = [
     img: "https://repository-images.githubusercontent.com/174415790/7a7fac80-cd0c-11e9-8a4d-c5be8e628b6b"
   },
   {
-    name: "credit-report-reconciliation",
+    name: "list-checking",
     languages: [],
     img: "https://repository-images.githubusercontent.com/96936589/f4179a80-cd0c-11e9-8b2b-1266caf97bb9"
   }

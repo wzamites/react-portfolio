@@ -45,7 +45,7 @@ class NavBar extends React.Component {
               Resume
               </Tooltip>
             }>
-            <Nav.Link href="https://drive.google.com/file/d/1crHmK_ONvLLEJnq5oHXtaTZ_m3Wxd1ZZ/view?usp=sharing" target="_blank">
+            <Nav.Link href="https://drive.google.com/open?id=1crHmK_ONvLLEJnq5oHXtaTZ_m3Wxd1ZZ" target="_blank">
                 <i className="fas fa-file fa-lg"></i>
             </Nav.Link>
           </OverlayTrigger>

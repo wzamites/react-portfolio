@@ -18,7 +18,8 @@ class CardSection extends React.Component {
           homepage={hub.homepage}
           opensource={hub.fork}
           topics={hub.topics}
-          languages_url={hub.languages_url} />
+          languages_url={hub.languages_url}
+          />
         )
       }
     )

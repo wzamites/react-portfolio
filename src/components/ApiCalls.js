@@ -6,8 +6,7 @@ import socials from '../assets/socials'
 
 class ApiCalls extends React.Component {
   componentDidMount() {
-
-    //First call
+    
     fetch("https://api.github.com/users/"+ socials.github + "/repos", {
         headers: {
             "Accept":"application/vnd.github.mercy-preview+json"
@@ -20,12 +19,13 @@ class ApiCalls extends React.Component {
         data.sort(function(a,b) {
           if(b.created_at > a.created_at) {
             return 1
-          } else{
+          } else {
             return -1
           }
         })
       )
     })
+    .then()
   }
 
   render() {

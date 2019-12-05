@@ -29,19 +29,26 @@ class ProjectCard extends React.Component {
   }
 
   render() {
-    //This this controls whether the card will be displayed based on filters
+    //This section this controls whether the card will be displayed based on filters
+
+    //set variable languagesFromExtraData
+    if (extraData.find(obj => obj.name === this.props.name)) {
+      var languagesFromExtraData = extraData.find(obj => obj.name === this.props.name).languages
+    } else {
+      var languagesFromExtraData = []
+    }
 
     //Combine the languages and the languages from extraData
-    let combinedLang = extraData.find(obj => obj.name === this.props.name).languages.concat(this.state.languages)
+    let combinedLanguages = languagesFromExtraData.concat(this.state.languages)
 
     // let checker = (arr, target) => target.every(v => arr.includes(v));
     let checker = (arr2, arr1) => arr2.every(function(val) { return arr1.indexOf(val) >= 0 })
 
-    //Set the display
+    //Set the display based on selection
     let filterDisplay
     if (this.props.skillarray === []) {
       filterDisplay = ""
-    } else if(!checker(this.props.skillarray,combinedLang)) {
+    } else if(!checker(this.props.skillarray,combinedLanguages)) {
       filterDisplay = "hide"
     }
 

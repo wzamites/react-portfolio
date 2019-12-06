@@ -1,9 +1,9 @@
 const extraData = [
-  {
-    name: "mcmocf",
-    languages: ["React/Redux"],
-    img: "https://repository-images.githubusercontent.com/198307890/76ea2680-cd08-11e9-95e5-18ef0ecbd627"
-  },
+  // {
+  //   name: "mcmocf",
+  //   languages: ["React/Redux"],
+  //   img: "https://repository-images.githubusercontent.com/198307890/76ea2680-cd08-11e9-95e5-18ef0ecbd627"
+  // },
   {
     name: "react-portfolio",
     languages: ["React/Redux"],
@@ -11,7 +11,7 @@ const extraData = [
   },
   {
     name: "insomnia-the-game",
-    languages: ["jQuery"],
+    languages: ["jQuery", "Open Source"],
     img: "https://repository-images.githubusercontent.com/197051436/3d66ea80-cd0b-11e9-9b3d-4919b67c072b"
   },
   {

@@ -5,7 +5,7 @@ class Footer extends React.Component {
   render() {
     const theUrl = "https:" + socials.domain
     return (
-      <footer className="text-center py-3">
+      <footer className="text-center py-3 greyBackground">
         © {new Date().getFullYear()} <a href={theUrl} > {socials.domain}</a>
       </footer>
     )

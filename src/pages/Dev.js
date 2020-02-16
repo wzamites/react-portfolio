@@ -22,7 +22,6 @@ class Dev extends React.Component {
       <SkillsButtonSet />
       <Card>
         <Card.Body>
-        <h2 className="center">Browse my GitHub repos</h2>
           <Card.Text className="center">
           {selectedSkills}
           </Card.Text>

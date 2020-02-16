@@ -20,14 +20,10 @@ class Dev extends React.Component {
     return (
       <div>
       <SkillsButtonSet />
-      <Card>
-        <Card.Body>
-          <Card.Text className="center">
-          {selectedSkills}
-          </Card.Text>
-          <CardSection />
-        </Card.Body>
-      </Card>
+      <div className="center">
+      {selectedSkills}
+      </div>
+      <CardSection />
       </div>
     )
   }

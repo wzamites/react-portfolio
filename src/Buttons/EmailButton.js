@@ -6,23 +6,12 @@ import Tooltip from 'react-bootstrap/Tooltip'
 class EmailButton extends React.Component {
   render() {
     return (
-      <OverlayTrigger
-        key='bottom'
-        placement='bottom'
-        delay={{ show: 750 }}
-        overlay={
-          <Tooltip id="tooltip-bottom">
-            wzamites@gmail.com
-          </Tooltip>
-        }>
         <Button
           variant="outline-secondary"
-          href="tel:16109960580"
+          href="mailto:wzamites@gmail.com"
           target="_blank">
             <i className="fas fa-envelope fa-lg"></i>
         </Button>
-      </OverlayTrigger>
-
     )
   }
 }

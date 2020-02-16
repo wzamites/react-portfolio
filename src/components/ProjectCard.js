@@ -129,7 +129,7 @@ class ProjectCard extends React.Component {
           <Card.Footer >
           <div>
             <a href={this.props.url}  target="_blank" rel="noopener noreferrer">
-              Github <FontAwesomeIcon icon={faCode} />
+              GitHub <FontAwesomeIcon icon={faCode} />
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;
             {globeLogo}

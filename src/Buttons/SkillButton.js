@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import { selectSkill } from '../redux/actions/skill-selected'
 
 class SkillButton extends React.Component {
-
   render() {
     //logic to return primary if clicked and outline-primary if not
     let buttonDisplay

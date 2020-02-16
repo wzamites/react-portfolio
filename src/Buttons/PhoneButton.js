@@ -12,13 +12,13 @@ class PhoneButton extends React.Component {
       key='bottom'
       trigger="click"
       placement='bottom'
-      delay={{ show: 750 }}
+      rootClose="true"
       overlay={
 
-        <Popover id="popover-basic">
+        <Popover id="popover-basic" rootClose="true">
         <Popover.Content>
         <Button
-          variant="outline-danger"
+          variant="outline-secondary"
           href="tel:16109960580"
           target="_blank">
             (610) 996-0580

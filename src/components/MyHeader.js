@@ -2,6 +2,9 @@ import React from 'react'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import LinkedinButton from '../Buttons/LinkedinButton'
 import GithubButton from '../Buttons/GithubButton'
+import PhoneButton from '../Buttons/PhoneButton'
+import EmailButton from '../Buttons/EmailButton'
+import ResumeButton from '../Buttons/ResumeButton'
 import socials from '../assets/socials'
 
 class MyHeader extends React.Component {
@@ -17,6 +20,12 @@ class MyHeader extends React.Component {
           <LinkedinButton username={socials.linkedin} />
           &nbsp;
           <GithubButton username={socials.github} />
+          &nbsp;
+          <PhoneButton />
+          &nbsp;
+          <EmailButton />
+          &nbsp;
+          <ResumeButton />
       </Jumbotron>
     )
   }

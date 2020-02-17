@@ -8,7 +8,7 @@ class ResumeButton extends React.Component {
     return (
         <Button
           variant="outline-secondary"
-          href="https://drive.google.com/file/d/1crHmK_ONvLLEJnq5oHXtaTZ_m3Wxd1ZZ/view?usp=sharing"
+          href="https://drive.google.com/file/d/19kA09JMiLqfNtefxA35EYcpQIjzGfkTE/view?usp=sharing"
           target="_blank">
             <i className="fas fa-file-alt fa-lg"></i>
         </Button>

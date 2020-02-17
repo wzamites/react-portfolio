@@ -1,14 +1,15 @@
 const languageList = [
   {
+    id: 3,
+    name: "JavaScript"
+  },
+  {
     id: 0,
     name: "React"
   },
   {
     id: 1,
-    name: "Redux"},
-  {
-    id: 3,
-    name: "JavaScript"
+    name: "Redux"
   },
   {
     id: 10,
@@ -16,7 +17,8 @@ const languageList = [
   },
   {
     id: 9,
-    name: "MongoDB"},
+    name: "MongoDB"
+  },
   {
     id: 11,
     name: "Node.js"

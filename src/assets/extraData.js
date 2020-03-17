@@ -1,16 +1,16 @@
 const extraData = [
   {
     name: "xkcd",
-    languages: ["React", "Express", "Node.js"],
+    languages: ["React", "Express", "Node.js", "Bootstrap"],
     img: "https://repository-images.githubusercontent.com/246153263/f3d07f80-67c4-11ea-96bb-df5626bee70c"},
   {
     name: "compounds",
-    languages: ["React", "Express", "MongoDB", "Node.js"],
+    languages: ["React", "Express", "MongoDB", "Node.js", "react-vis", "Bootstrap"],
     img: "https://raw.githubusercontent.com/wzamites/compounds/master/docs/img/scsmall.png"
   },
   {
     name: "react-portfolio",
-    languages: ["React", "Redux"],
+    languages: ["React", "Redux", "Bootstrap"],
     img: "https://repository-images.githubusercontent.com/198307890/76ea2680-cd08-11e9-95e5-18ef0ecbd627"
   },
   {
@@ -20,7 +20,7 @@ const extraData = [
   },
   {
     name: "tindog",
-    languages: [],
+    languages: ["Bootstrap"],
     img: "https://repository-images.githubusercontent.com/185657331/1c52c980-cd0c-11e9-96bd-57d29e7c5811"
   },
   {

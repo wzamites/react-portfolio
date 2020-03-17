@@ -110,7 +110,7 @@ class ProjectCard extends React.Component {
 
     return (
       <div className={"cardContainer " + filterDisplay}>
-        <Card id="projectCards" style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }}>
           <a href={this.props.url}  target="_blank" rel="noopener noreferrer">
             <Card.Img variant="top" src={cardImage} />
           </a>

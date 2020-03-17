@@ -8,10 +8,6 @@ const languageList = [
     name: "React"
   },
   {
-    id: 1,
-    name: "Redux"
-  },
-  {
     id: 10,
     name: "Express"
   },
@@ -28,17 +24,9 @@ const languageList = [
     name: "jQuery"
   },
   {
-    id: 6,
-    name: "MATLAB"
-  },
-  {
     id: 7,
     name: "Python"
   },
-  {
-    id: 8,
-    name: "Open Source"
-  }
 ]
 
 export default languageList

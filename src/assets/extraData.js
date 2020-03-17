@@ -1,5 +1,9 @@
 const extraData = [
   {
+    name: "xkcd",
+    languages: ["React", "Express", "Node.js"],
+    img: "https://repository-images.githubusercontent.com/246153263/f3d07f80-67c4-11ea-96bb-df5626bee70c"},
+  {
     name: "compounds",
     languages: ["React", "Express", "MongoDB", "Node.js"],
     img: "https://raw.githubusercontent.com/wzamites/compounds/master/docs/img/scsmall.png"

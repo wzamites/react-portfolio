@@ -10,7 +10,7 @@
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "bootstrap": "^4.4.1",
-    "jquery": "^1.9.1",
+    "jquery": "^3.4.0",
     "kind-of": "^6.0.3",
     "minimist": "^1.2.5",
     "react": "^16.13.1",

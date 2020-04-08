@@ -1,7 +1,7 @@
 const extraData = [
   {
     name: "mcmocf",
-    languages: [],
+    languages: ["React", "Bootstrap"],
     img: "https://repository-images.githubusercontent.com/252314825/da7db600-79b3-11ea-80f6-93d728bc0a2f"
   },
   {

@@ -29,11 +29,6 @@ const extraData = [
     img: "https://repository-images.githubusercontent.com/185657331/1c52c980-cd0c-11e9-96bd-57d29e7c5811"
   },
   {
-    name: "static-portfolio",
-    languages: [],
-    img: "https://repository-images.githubusercontent.com/184465906/4fd62980-ccf5-11e9-979e-3dcf8ab121b1"
-  },
-  {
     name: "time-tracker",
     languages: ["jQuery"],
     img: "https://repository-images.githubusercontent.com/174415790/7a7fac80-cd0c-11e9-8a4d-c5be8e628b6b"

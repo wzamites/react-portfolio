@@ -12,7 +12,7 @@ class CardSection extends React.Component {
       function(hub) {
         //if the repo exists in extraData, go ahead
         //otherwise return null
-        if (extraData.some(e => e.name === hub.name)) {
+        if (extraData.some(extraData => extraData.name === hub.name)) {
           return (
             <ProjectCard
             key={hub.id}

@@ -17,9 +17,9 @@ class ProjectCard extends React.Component {
       }
   }
 
-  //API call the languages used
   componentDidMount() {
-    fetch(this.props.languages_url)  //Get the languages URL through props and pass it into fetch.
+    //API call the languages used
+    fetch(this.props.languages_url)
     .then(response => response.json())
     .then(data => {
       this.setState({

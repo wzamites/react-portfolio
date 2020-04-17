@@ -6,29 +6,10 @@ This setup is meant to take ANY github username, display its repositories, and a
 
 These instructions will get you a copy of the project to run on localhost:3000. This is the development version of the project.
 
-### Prerequisites
-
-Check that you have node and npm installed
-
-```
-node -v
-npm -v
-```
-
-If not, get it here https://www.npmjs.com/get-npm
-
 ### Installing
-
-First cd where you'd like the project to live, then clone the repository there
-
 ```
 git clone https://github.com/wzamites/react-portfolio
 cd react-portfolio
-```
-
-Then, install the dependencies as defined in package.json, and start the development server
-
-```
 npm install
 npm start
 ```

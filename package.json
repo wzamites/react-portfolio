@@ -21,7 +21,7 @@
     "react-scripts": "^3.4.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "serialize-javascript": "^2.1.2",
+    "serialize-javascript": "^3.1.0",
     "thum.io": "^1.0.9"
   },
   "scripts": {
